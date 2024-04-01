@@ -12,6 +12,7 @@ Currently, these tools are built:
 * fd2pragma
 * ira
 * sfdc
+* vasm
 * vbcc
 * vlink
 * libnix
@@ -32,9 +33,10 @@ Currently, these tools are built:
 * NDK3.2: Hyperion, unknown license...
 * newlib: Free Software Foundation, GNU GENERAL PUBLIC LICENSE V2.
 * sfdc: Martin Blom, GNU GENERAL PUBLIC LICENSE V2.
-* vasm: copyright in 2002-2022 by Volker Barthelmann, free for non-commercial purposes.
-* vbcc: copyright in 1995-2022 by Volker Barthelmann, free for non-commercial purposes.
-* vlink: copyright 1995-2022 by Frank Wille, free for non-commercial purposes.
+* vasm: copyright in 2002-2022 by Volker Barthelmann, free for non-commercial purposes on non-m68k-amigaos systems.
+* vbcc: copyright in 1995-2022 by Volker Barthelmann, free for non-commercial purposes on non-m68k-amigaos systems.
+* vlink: copyright 1995-2022 by Frank Wille, free for non-commercial purposes on non-m68k-amigaos systems.
+**NOTE** An exception for commercial usage of vasm/vbcc/vlink is granted, provided that the target OS is AmigaOS/68k!
 
 There are also libraries (SDKs) which can be downloaded and installed. These libraries can all be built from source. All of these libraries are provided under their respective licenses.
 
