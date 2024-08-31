@@ -1,3 +1,25 @@
+# amiga-gcc "termuxified" an educational endeavor..
+
+This custom branch is an effort to get Bebbo's amiga-gcc to work on Termux (arm|aarch64-android).
+
+Since latest Termux works with Clang instead of plain GCC there are some incompatibilities to conquer.
+
+Although the amiga-gcc toolchain compilation failed because of errors during binutils compilation it came
+
+to my attention that VASM-VBCC-VLINK was build correctly so I focused on those great alternative binutils.
+
+Thus to keep classic Commodore Amiga fans (and myself) motivated, we focus on creating a working VASM-VBCC-VLINK toolchain first. 
+
+Furthermore it is important to know that, when working with FreePascal (FPC termuxified), a VASMM68K_STD assembler
+
+is needed to cross-compile for Amiga so we use the amiga-gcc build procedure to produce VASMM68K_STD additionally.
+
+Let's work through it and see "where the ship strands" :-)
+
+Maybe some day it works on Termux, until then, please be patient.
+
+PTz()uAH
+
 # amiga-gcc       [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRRBRLCKDU3H6)
 
 The GNU C Compiler with binutils and other useful tools for cross compiling software for the Commodore Amiga.
