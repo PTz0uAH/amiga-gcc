@@ -12,9 +12,13 @@ Thus to keep classic Commodore Amiga fans (and myself) motivated, we focus on cr
 Furthermore it is important to know that, when working with FreePascal (FPC termuxified), a VASMM68K_STD assembler
 is needed to cross-compile for Amiga so we use the amiga-gcc build procedure to produce VASMM68K_STD additionally.
 
-Let's work through it and see "where the ship strands" :-)
+To start the experimental journey we first another makefile-target to isolate our "termuxified" code from the rest.
 
-Maybe some day it works on Termux, until then, please be patient.
+I guess a "make tmx" will suit our pioneering/re-engineering purposes just fine for now.
+
+Let's work it through and see "where the ship strands". :-)
+
+Maybe some day amiga-gcc will fully work on Termux, until then, please be patient.
 
 PTz()uAH
 
