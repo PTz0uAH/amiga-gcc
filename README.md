@@ -5,13 +5,11 @@ This custom branch is an effort to get Bebbo's amiga-gcc to work on Termux (arm|
 Since latest Termux works with Clang instead of plain GCC there are some incompatibilities to conquer.
 
 Although the amiga-gcc toolchain compilation failed because of errors during binutils compilation it came
-
 to my attention that VASM-VBCC-VLINK was build correctly so I focused on those great alternative binutils.
 
 Thus to keep classic Commodore Amiga fans (and myself) motivated, we focus on creating a working VASM-VBCC-VLINK toolchain first. 
 
 Furthermore it is important to know that, when working with FreePascal (FPC termuxified), a VASMM68K_STD assembler
-
 is needed to cross-compile for Amiga so we use the amiga-gcc build procedure to produce VASMM68K_STD additionally.
 
 Let's work through it and see "where the ship strands" :-)
