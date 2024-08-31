@@ -160,6 +160,7 @@ help:
 	@echo "make info					print prefix and other flags"
 	@echo "make all 					build and install all"
 	@echo "make min 					build and install the minimal to use gcc"
+	@echo "make tmx 					build and install the vbcc toolchain for Termux"
 	@echo "make <target>					builds a target: binutils, gcc, gprof, fd2sfd, fd2pragma, ira, sfdc, vasm, vbcc, vlink, libnix, ixemul, libgcc, clib2, libdebug, libSDL12, libpthread, ndk, ndk13"
 	@echo "make clean					remove the build folder"
 	@echo "make clean-<target>				remove the target's build folder"
@@ -179,11 +180,12 @@ help:
 # =================================================
 # all
 # =================================================
-.PHONY: all gcc gdb gprof binutils fd2sfd fd2pragma ira sfdc vasm libnix ixemul libgcc clib2 libdebug libpthread ndk ndk13 min
+.PHONY: all gcc gdb gprof binutils fd2sfd fd2pragma ira sfdc vasm libnix ixemul libgcc clib2 libdebug libpthread ndk ndk13 min tmx
 all: gcc binutils gdb gprof fd2sfd fd2pragma ira sfdc vasm libnix ixemul libgcc clib2 libdebug libpthread ndk ndk13 libSDL12
 
 min: binutils gcc gprof libnix libgcc
 
+tmx: ndk ndk13 vasm vlink vbcc
 # =================================================
 # clean
 # =================================================
