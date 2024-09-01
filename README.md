@@ -20,6 +20,16 @@ Let's work it through and see "where the ship strands". :-)
 
 Maybe some day amiga-gcc will fully work on Termux, until then, please be patient.
 
+Currently, these tools are built:
+
+* fd2sfd
+* fd2pragma
+* sfdc
+* vasm
+* vbcc
+* vlink
+* lha
+
 PTz()uAH
 
 # amiga-gcc       [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRRBRLCKDU3H6)
