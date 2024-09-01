@@ -7,7 +7,7 @@ Since latest Termux works with Clang instead of plain GCC there are some incompa
 Although the amiga-gcc toolchain compilation failed because of errors during binutils compilation it came
 to my attention that VASM-VBCC-VLINK was build correctly so I focused on those great alternative binutils.
 
-Thus to keep classic Commodore Amiga fans (and myself) motivated, we focus on creating a working VASM-VBCC-VLINK toolchain first. 
+Thus to keep classic Commodore Amiga fans (and myself) motivated, creating a working VASM-VBCC-VLINK toolchain first has prio. 
 
 Furthermore it is important to know that, when working with FreePascal (FPC termuxified), a VASMM68K_STD assembler
 is needed to cross-compile for Amiga so we use the amiga-gcc build procedure to produce VASMM68K_STD additionally.
