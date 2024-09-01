@@ -1,8 +1,8 @@
 # =================================================
 # Makefile based Amiga compiler setup.
 # (c) Stefan "Bebbo" Franke in 2018
-#
-# Riding a dead horse...
+# Termuxified by PTz(Peter Slootbeek)uAH in 2024 
+# Riding a dead horse.. so where is the rodeo ?!
 # =================================================
 include disable_implicite_rules.mk
 # =================================================
@@ -10,7 +10,7 @@ include disable_implicite_rules.mk
 # =================================================
 $(eval SHELL = $(shell which bash 2>/dev/null) ) 
 
-PREFIX ?= /opt/amiga
+PREFIX ?= /data/data/com.termux/files/usr/opt/amiga
 export PATH := $(PREFIX)/bin:$(PATH)
 
 TARGET ?= m68k-amigaos
