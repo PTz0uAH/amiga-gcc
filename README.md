@@ -5,7 +5,7 @@ This custom branch is an effort to get Bebbo's amiga-gcc to work on Termux (arm|
 Since latest Termux works with Clang instead of plain GCC there are some incompatibilities to conquer.
 
 Although the amiga-gcc toolchain compilation failed because of errors during binutils compilation it came
-to my attention that VASM-VBCC-VLINK was build correctly so I focused on those great alternative binutils.
+to my attention that "holy trinity" VASM-VBCC-VLINK ("V3") was build correctly so I focused on those great alternative binutils first.
 
 Thus to keep classic Commodore Amiga fans (and myself) motivated, creating a working VASM-VBCC-VLINK toolchain first has prio. 
 
