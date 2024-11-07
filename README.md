@@ -42,7 +42,7 @@ Currently, these tools are built:
 
 PTz(termuxify)uAH
 
-p.s. if porting DOpus can be achieved with VVV-toolchain we don't need gcc anymore, the executables-sizes become more efficient and smaller.. it would be win-win..
+p.s. if "porting" DOpus from gcc to vbcc can be achieved with VVV-toolchain we don't need gcc anymore, the amiga executables-sizes become much more efficient and smaller.. it would be win-win..
 
 # amiga-gcc       [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRRBRLCKDU3H6)
 
