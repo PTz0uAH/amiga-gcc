@@ -20,6 +20,16 @@ Let's work it through and see "where the ship strands". :-)
 
 Maybe some day amiga-gcc will fully work on Termux, until then, please be patient.
 
+Amiga-gcc fully build is needed i.e. to cross-build the legendary filemanager "Directory Opus" 5.9x or DOpus for the connaisseurs..
+
+DOpus5 was donated to the public by original developer Jonathan Potter after abandoning the Amiga platform.
+
+So you might understand now why re-formatting/factoring the DOpus5 C-sources is important now VASM, VBCC and VLINK are ported to Termux.
+
+Those alt-bintools might be the key to achieve "the circular Amiga experience".. from an "autarchical" p.o.v.
+
+What IYKWIM?
+
 Currently, these tools are built:
 
 * fd2sfd
@@ -30,7 +40,9 @@ Currently, these tools are built:
 * vlink
 * lha
 
-PTz()uAH
+PTz(termuxify)uAH
+
+p.s. if porting DOpus can be achieved with VVV-toolchain we don't need gcc anymore, the executables-sizes become more efficient and smaller.. it would be win-win..
 
 # amiga-gcc       [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRRBRLCKDU3H6)
 
