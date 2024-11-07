@@ -25,10 +25,10 @@ Amiga-gcc fully build is needed i.e. to cross-build the legendary filemanager "D
 Although the Amitools with its Vamos M680xx emulator can be configured to build the 5.82 source from commandline with SASC v6.5x (win/lin/mac),
 I prefer the gcc-fied source of DOpus for easy deployment on supported platforms and new features/bugfixes.
 
-DOpus5 was "donated" to the public by original developer Jonathan Potter after abandoning the Amiga platform after an initiative was launched,
-by a freeware (aros/morphos/amiga) developer group to purchase the source in order to license the code under AROS license.
+DOpus5 was "donated" to the public by original developer Jonathan Potter after abandoning the Amiga platform and an initiative was launched,
+by a freeware (aros/morphos/amiga) developer group, to purchase the source in order to license the code under AROS license and revamp the code.
 
-So you might understand now why re-formatting/factoring the DOpus5 C-sources is important now VASM, VBCC and VLINK are ported to Termux.
+So you might understand now why re-formatting/factoring the DOpus5 C-sources is important now VASM, VBCC and VLINK are ported to function on Termux.
 
 Those alt-bintools might be the key to achieve "the circular Amiga experience".. from an "autarchical" p.o.v.
 
@@ -46,7 +46,8 @@ Currently, these tools are built:
 
 PTz(termuxify)uAH
 
-p.s. if "porting" DOpus from gcc to vbcc can be achieved with VVV-toolchain we don't need gcc anymore, the amiga executables-sizes become much more efficient and smaller.. it would be win-win..
+p.s. "porting/transliterating" the DOpus5 source from gcc to vbcc can be achieved with VVV-toolchain we don't need gcc anymore, the amiga executables-sizes become much more efficient and smaller.. it would be win-win,
+but only if amiga-gcc can't be build on Termux..
 
 # amiga-gcc       [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRRBRLCKDU3H6)
 
