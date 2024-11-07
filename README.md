@@ -22,7 +22,11 @@ Maybe some day amiga-gcc will fully work on Termux, until then, please be patien
 
 Amiga-gcc fully build is needed i.e. to cross-build the legendary filemanager "Directory Opus" 5.9x or DOpus for the connaisseurs..
 
-DOpus5 was donated to the public by original developer Jonathan Potter after abandoning the Amiga platform.
+Although the Amitools with its Vamos M680xx emulator can be configured to build the 5.82 source from commandline with SASC v6.5x (win/lin/mac),
+I prefer the gcc-fied source of DOpus for easy deployment on supported platforms and new features/bugfixes.
+
+DOpus5 was "donated" to the public by original developer Jonathan Potter after abandoning the Amiga platform after an initiative was launched,
+by a freeware (aros/morphos/amiga) developer group to purchase the source in order to license the code under AROS license.
 
 So you might understand now why re-formatting/factoring the DOpus5 C-sources is important now VASM, VBCC and VLINK are ported to Termux.
 
