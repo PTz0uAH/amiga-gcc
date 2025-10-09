@@ -1,8 +1,20 @@
-# amiga-gcc       [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRRBRLCKDU3H6)
+# amiga-gcc restored edition with emphasis on Classic Amiga usage scope
+
+Statement:
+
+Most credits goto Bebbo as original maintainer who unfortunately left GH so we private devs had to help ourselves..
+
+It seems he won't return soon but if he returns I will follow his mainstream repo again if that suits our current oldschool usage.. 
+
+I'll try to implement significant changes from his current repo outside GH but keeping the amiga-gcc toolchain working to produce Classic Amiga software is my prime directive.. 
+
+With kind regards PTz()uAH
+
+# Amiga-gcc what is?
 
 The GNU C Compiler with binutils and other useful tools for cross compiling software for the Commodore Amiga.
 
-This is a Makefile based approach to building the amigaos-toolchain, aiming to reduce its build time.
+This method is a Makefile based approach to build the amigaos-toolchain in an efficient way, aiming to reduce its build time.
 
 Currently, these tools are built:
 
@@ -43,18 +55,19 @@ There are also libraries (SDKs) which can be downloaded and installed. These lib
 Various AmigaOS-specific patches have been applied to this version of gcc. None if these changes modify the original copyright in any way. All other changes are published under the terms of the GNU GENERAL PUBLIC LICENSE V2.
 
 ## Prerequisites
-### Centos
+
+### Centos (not tested)
 `sudo yum install wget gcc gcc-c++ python git perl-Pod-Simple gperf patch autoconf automake make makedepend bison flex ncurses-devel gmp-devel mpfr-devel libmpc-devel gettext-devel texinfo rsync readline-devel`
 
-### Fedora
+### Fedora (not tested)
 `sudo dnf install wget gcc gcc-c++ python git perl-Pod-Simple gperf patch autoconf automake make makedepend bison flex ncurses-devel gmp-devel mpfr-devel libmpc-devel gettext-devel texinfo rsync readline-devel`
 
-### Ubuntu, Debian
+### Ubuntu, Debian (not tested)
 `sudo apt install make wget git gcc g++ lhasa libgmp-dev libmpfr-dev libmpc-dev flex bison gettext texinfo ncurses-dev autoconf rsync libreadline-dev`
 
 If building with a normal user, the `PREFIX` directory must be writable (default is `/opt/amiga`). You can add the user to an appropriate group. 
 
-### macOS
+### macOS (not tested)
 Install Homebrew (https://brew.sh/) or any other package manager first. The compiler will be installed together with XCode. Once XCode and Homebrew are up install the required packages:
 
 ```
@@ -86,10 +99,10 @@ export PATH=$(brew --prefix bison)/bin:$PATH
 ```
 * This version of gcc supports building binaries optimised for the various Motorola 68K series CPUs from the 68000 to the 68060 and also features some optimisations for the Vampire/Apollo 68080.
 
-### macOS on M1
+### macOS on M1 (not tested)
 Native builds on M1 Macs are now directly supported.
 
-### Windows with Cygwin
+### Windows with Cygwin (not tested)
 Install cygwin via setup.exe and add wget. Then open cygwin shell and run:
 
 ```
@@ -98,7 +111,7 @@ install apt-cyg /bin
 apt-cyg install gcc-core gcc-g++ python git perl-Pod-Simple gperf patch automake make makedepend bison flex libncurses-devel python-devel gettext-devel libgmp-devel libmpc-devel libmpfr-devel rsync
 ```
 
-### Windows with msys2
+### Windows with msys2 (not tested)
 
 Precompiled suite with installer: http://franke.ms/download/setup-amiga-gcc.exe
 
@@ -108,12 +121,15 @@ pacman -S git base-devel gcc flex gmp-devel mpc-devel mpfr-devel ncurses-devel r
 
 Also note that you **MUST** cd into an **absolute path** e.g. `cd /c/msys64/home/test/amiga-gcc/` before running make, or builds may fail, because some files aren't found correctly (that's a msys2 bug).
 
-### Ubuntu running on the Windows 10 Linux subsystem
+### Ubuntu running on the Windows 10 Linux subsystem (not tested)
 same as normal ubuntu
+
+### Debian Trixie on WSL aka Windows 10 Subsystem for Linux (tested)
+`sudo apt install make wget git gcc g++ lhasa libgmp-dev libmpfr-dev libmpc-dev flex bison gettext texinfo ncurses-dev autoconf rsync libreadline-dev`
 
 ## Howto Clone and Download All You Need
 ```
-git clone https://github.com/bebbo/amiga-gcc
+git clone https://github.com/PTz0uAH/amiga-gcc
 cd amiga-gcc
 make update
 ```
@@ -185,13 +201,13 @@ You can select one of the various runtimes. My favorite is `libnix` which is sel
 * `-mcrt=clib2`: the clib2 libraries.
 * `-mcrt=ixemul`: the ixemul libraries for Kickstart 2.0+, requires an installed `ixemul.library`
 
-## Checking gcc
+## Checking gcc (not tested)
 
 To check the built version you may consider to run the gcc dejagnu tests. This does not cover everything but it's a start.
 The tests are using my improved version of VAMOS (downstream of https://github.com/cnvogelg/amitools) to emulate the Amiga,
 and right now not all improvements went back into the upstream.
 
-### Debian / Ubuntu
+### Debian / Ubuntu (not tested)
 ```
 sudo apt install dejagnu
 sudo cp baseboards/* /usr/share/dejagnu/baseboards
@@ -199,7 +215,7 @@ pip install -U git+https://github.com/bebbo/amitools.git
 make check
 ```
 
-### macOS
+### macOS (not tested)
 ```
 brew install dejagnu
 cp baseboards/* $(brew --prefix)/opt/dejagnu/share/dejagnu/baseboards
@@ -207,27 +223,27 @@ pip install -U  git+https://github.com/bebbo/amitools.git
 make check
 ```
 
-## Version management
+## Version management (not tested)
 This project does not use git submodules since it's to inconvenient to work with develop and release branches in each module and the main module.
 
 Instead the **Makefile** provides some targets to switch to an older state for all modules.
 
-### Switching amiga-gcc to a given date
+### Switching amiga-gcc to a given date (not tested)
 Use make to switch all modules to a given date. You may also add the time
 ```
 make v date=2021-04-01
 ```
-### Switching amiga-gcc back to the branches
+### Switching amiga-gcc back to the branches (not tested)
 Run make to switch all modules back to the branch
 ```
 make v
 ```
-### Show the current commit for all submodules
+### Show the current commit for all submodules (not tested)
 This lists all modules with the last commit. Useful if you switched to a given date to show what's where.
 ```
 make l
 ```
-### Switch a module to a different branch
+### Switch a module to a different branch (not tested)
 You can switch modules to different branches. E.g.
 ```
 make branch mod=binutils branch=devel1
@@ -242,21 +258,21 @@ If you start from scratch, switch gcc as soon as possible, e.g.:
 ```
 sudo mkdir -p /opt/amiga13
 sudo chown $USER /opt/amiga13
-git clone https://github.com/bebbo/amiga-gcc
+git clone https://github.com/PTz0uAH/amiga-gcc
 cd amiga-gcc
 export PREFIX=/opt/amiga13
 make branch branch=amiga13.1 mod=gcc
 make all -j20
 ```
 
-### Notable branches
+### Notable branches (not tested)
 * `amiga6`: The default branch providing gcc-6.5.0b with a lot of hacks^^
 * `amiga13.1': gcc-13.1.0  supports register parameters
 * `amiga13.2': gcc-13.2.0  supports register parameters
 * `68080regs`: gcc-6.5.0b supporting the B0-B7/E0-E7 AMMX registers of the Apollo 68080 (experimental)
  
 
-## Fortran support
+## Fortran support (not tested)
 m68k-amigaos-gfortran is available now too. To build it add `ADDLANG=fortran`:
 ```
 make all -j20 ADDLANG=fortran
