@@ -54,7 +54,7 @@ There are also libraries (SDKs) which can be downloaded and installed. These lib
 
 Various AmigaOS-specific patches have been applied to this version of gcc. None if these changes modify the original copyright in any way. All other changes are published under the terms of the GNU GENERAL PUBLIC LICENSE V2.
 
-## Prerequisites
+## Prerequisites (please report at issues if you tested an untested section)
 
 ### Centos (not tested)
 `sudo yum install wget gcc gcc-c++ python git perl-Pod-Simple gperf patch autoconf automake make makedepend bison flex ncurses-devel gmp-devel mpfr-devel libmpc-devel gettext-devel texinfo rsync readline-devel`
